@@ -1,0 +1,10 @@
+{
+  "mcpServers": {
+    "cross-agent": {
+      "url": "https://YOUR_DOMAIN/mcp",
+      "headers": {
+        "Authorization": "Bearer YOUR_AGENT_TOKEN"
+      }
+    }
+  }
+}

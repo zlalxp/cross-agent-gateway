@@ -1,0 +1,16 @@
+[Unit]
+Description=Cross-agent MCP gateway (Claude / Codex / Grok)
+After=network.target
+
+[Service]
+Type=simple
+User=root
+WorkingDirectory=/opt/cross-agent/gateway
+EnvironmentFile=/opt/cross-agent/.env
+ExecStart=/opt/cross-agent/.venv/bin/python /opt/cross-agent/gateway/server.py
+Restart=always
+RestartSec=3
+LimitNOFILE=65535
+
+[Install]
+WantedBy=multi-user.target
